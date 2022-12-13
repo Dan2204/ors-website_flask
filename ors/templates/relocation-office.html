@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <!-- ABOUT HEAD -->
+   <section id="about-head">
+     <div class="showcase-inner py-5 text-white">
+       <div class="container">
+         <div class="row text-center">
+           <div class="col-md-12">
+             <h1 class="display-4">Office Relocations</h1>
+             <p class="lead">
+               Leaders in Professional Move Management and Specialized Office
+               Relocations, Never Failing to Deliver on Our Promises
+             </p>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+
+   <!-- Breadcrumb -->
+   <section id="bc" class="mt-3">
+     <div class="container">
+       <nav>
+         <ol class="breadcrumb">
+           <li class="breadcrumb-item">
+             <a href="{{ url_for('core.index') }}"><i class="fas fa-home pr-1"></i> Home</a>
+           </li>
+           <li id="li-style" class="breadcrumb-item active">
+             Services
+           </li>
+           <li id="li-style" class="breadcrumb-item active">
+             Office Relocations
+           </li>
+         </ol>
+       </nav>
+     </div>
+   </section>
+
+   <!-- MAIN CONTENT -->
+   <section id="services-main-content">
+     <div class="container mt-4">
+       <div class="row">
+         <div class="col-md-8" id="info-text-content">
+           <h3 class="sec-head">Planning Your Office Relocation </h3>
+           <p class="info-text-font">
+             Office Relocation Services delivers unparalleled office moves that
+             every business across all industries can depend on. Whether you have
+              a specialized relocation or need a move manager for your office move,
+              we will deliver professional planning, transportation and the teamwork
+              needed for valuable and impressive results. Every office relocation is
+              assigned to our expert move manager to ensure every part of the office
+              move is planned with expert results.
+           </p>
+           <img class="img-fluid" style="width: 80%;" src="{{ url_for('static', filename='img/or_page_top.jpg') }}"
+                id="or-pic-top" alt="Office Relocation Services"  />
+           <h3 class="sec-head pt-3">Site Visits </h3>
+           <p class="info-text-font">
+             Our specialised team will conduct a pre-planned visit your business
+             before the day of the move. This helps us to determine any access
+             issues and to ensure our trucks can easily make their way onto the
+             property for the packing and transport of goods. We pride ourselves
+             on our office relocation practices and are committed to adhering to
+             safe and ethical codes of practice.
+           </p>
+           <p class="info-text-font">
+             On the day of your office move, our expert movers will be available
+             to package and remove your goods for transport. We have a dedicated
+             team that specialise in IT relocations so that your hardware is
+             carefully packaged for transportation.
+           </p>
+           <p class="info-text-font">
+             It is important to contact your experienced and expert office moving
+             services when you need a detailed and an efficient commercial move.
+             At Office Relocation Services, we tailor our services according to
+             the scope of your move. If large heavy equipment, we have the tools
+             to transport these items without causing damage. If hardware including
+             computer systems and office technologies, require a move, we are the
+             ones to call. For any business removal and relocation, we are here
+             to deliver on our promises
+           </p>
+           <p class="info-text-font">
+             Before any office move is undertaken, we perform complete risk assessments
+             and ensuring all commercial moves are handled with careful attention
+             to detail. Our fully equipped team are specialized in handling the
+             diverse yet unique needs of your business.
+           </p>
+           <h3 class="sec-head pt-3">Move Management </h3>
+           <p class="info-text-font">
+             Our team will develop a unique solution in line with your business
+             needs and are equipped to transport large heavy items such as hardware,
+             computer systems and office technologies by using the correct tools
+             to transport these items efficiently without damage and delay.
+           </p>
+           <h3 class="sec-head pt-3">We are Fully Insured </h3>
+           <p class="info-text-font">
+             We are fully insured against liability damages which offer our clients
+             piece of mind by ensuring that your property is covered in the event
+             of damages.
+           </p>
+           <p class="info-text-font">
+             This part of the service is not limited to your belongings, but provides
+             cover in the event of damage to vertical surfaces such as walls, doors
+             and glass panels. Such items are taken extra care of by using protective
+             covers and lightweight core flute panels which are taped in place using a
+             low adhesive masking tape. Doors and frames can be protected with custom
+             made padded protectors held in place by spring clips to ensure unobstructed
+             use of the doorway at all times.
+           </p>
+           <!-- <p class="info-text-font">
+             Our professional team is fully equipped and incorporates technique and
+             protective materials to cover walls, floors and delicate areas that could
+             easily become damaged during the move.
+           </p> -->
+
+           <h3 class="sec-head pt-3" id="or-pic">At Office Relocation Services,
+             We Have Got You Covered. </h3>
+
+           <div class="card card-body py-5">
+             <div class="row">
+               <div class="col">
+                 <img
+                   src="{{ url_for('static', filename='img/or_page_bottom.jpg') }}"
+                   style="width: 70%;"
+                   alt="Office Relocation Services"
+                   class="img-fluid"
+                   id="or-pic-bottom"
+                 />
+               </div>
+             </div>
+           </div>
+         </div>
+
+         <div class="col-md-4 d-none d-md-block">
+          {% include '_rel-form.html' %}
+         </div>
+       </div>
+     </div>
+   </section>
+
+{% endblock %}

@@ -1,0 +1,88 @@
+
+      <div id="quote-form" class="container">
+        <h4 class="text-center mb-4">Get a free quote.</h4>
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-info" style="text-align: center" role="alert">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        <form id="contact" class="contact-form" method="POST">
+        {{ form.hidden_tag() }}
+        <!-- NAME* -->
+        <div class="form-group">
+          <div class="input-group mb-1">
+            <div class="input-group-prepend">
+              <span class="input-group-text"
+                ><i class="fas fa-user"></i
+              ></span>
+            </div>
+            {{ form.name(placeholder='Name *', class="form-control") }}
+          </div>
+          {% for error in form.name.errors %}
+            <span style="font-size: 1rem; color:red">{{ error }}</span>
+          {% endfor %}
+        </div>
+
+        <!-- COMPANY NAME -->
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"
+                ><i class="fas fa-briefcase"></i
+              ></span>
+            </div>
+            {{ form.company_name(placeholder='Company Name', class="form-control") }}
+          </div>
+        </div>
+        <!-- EMAIL* -->
+        <div class="form-group">
+          <div class="input-group mb-1">
+            <div class="input-group-prepend">
+              <span class="input-group-text"
+                ><i class="fas fa-envelope"></i
+              ></span>
+            </div>
+            {{ form.email(placeholder="Email *", class="form-control") }}
+          </div>
+          {% for error in form.email.errors %}
+            <span style="font-size: 1rem; color:red">{{ error }}</span>
+          {% endfor %}
+        </div>
+        <!-- CONTACT NUMBER* -->
+        <div class="form-group">
+          <div class="input-group mb-1">
+            <div class="input-group-prepend">
+              <span class="input-group-text"
+                ><i class="fas fa-phone"></i
+              ></span>
+            </div>
+            {{ form.phone(placeholder="Contact Number *", class="form-control") }}
+          </div>
+          {% for error in form.phone.errors %}
+            <span style="font-size: 1rem; color: red">{{ error }}</span>
+          {% endfor %}
+        </div>
+        <!-- COMMENTS -->
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"
+                ><i class="fas fa-pencil-alt"></i
+              ></span>
+            </div>
+            {{ form.comments(cols=50, rows=4, placeholder="Comments", class="form-control") }}
+          </div>
+        </div>
+        <p class="text-muted">* required fields</p>
+        <div class="submit-btn">
+          <button class="btn btn-block" id="submit" type="submit">
+          {{ form.submit(class="btn btn-block submit-btn", id="submit") }}
+          <!-- <button class="btn btn-block" id="submit" type="submit">Submit</button> -->
+          </button>
+        </div>
+      </form>
+      </div>
