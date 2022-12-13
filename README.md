@@ -1,6 +1,6 @@
 # ors-website_flask
 
-PHP site converted to Flask to be stored on portfolio site.
+PHP site converted to Flask but company stopped trading before update.
 
 Original php site here: 
 
